@@ -127,19 +127,19 @@ function ContactUs() {
                         {/* Phone Number */}
                         <li className="flex items-center text-gray-700">
                             <FiPhone className="h-6 w-6 text-blue-500" />
-                            <span className="ml-4 text-lg">+971-65532390</span>
+                            <span className="ml-4 text-sm md:text-lg">+971-65532390</span>
                         </li>
 
                         {/* Email */}
                         <li className="flex items-center text-gray-700">
                             <FiMail className="h-6 w-6 text-blue-500" />
-                            <span className="ml-4 text-lg">Pagedone1234@gmail.com</span>
+                            <span className="ml-4 text-sm md:text-lg">Pagedone1234@gmail.com</span>
                         </li>
 
                         {/* Address */}
                         <li className="flex items-center text-gray-700">
                             <FiMapPin className="h-6 w-6 text-blue-500" />
-                            <span className="ml-4 text-lg">Al Nabbah , Sharjah - U A E</span>
+                            <span className="ml-4 text-sm md:text-lg">Al Nabbah , Sharjah - U A E</span>
                         </li>
                     </ul>
 

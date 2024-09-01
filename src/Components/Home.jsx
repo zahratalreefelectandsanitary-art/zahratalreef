@@ -44,6 +44,45 @@ function Home() {
 
     ];
 
+    const sendingmessage = async (event) => {
+        event.preventDefault();
+        console.log("Form submission started");
+
+        const formData = new FormData(event.target);
+        formData.append("access_key", "bce32227-2e83-4843-9e17-32a4550b043c");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        console.log("Form Data:", object);
+
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: json,
+            });
+
+            const result = await res.json();
+
+            console.log("Response:", result);
+
+            if (result.success) {
+                alert("Message sent successfully!");
+            } else {
+                console.error("Failed to send message", result);
+                alert("Failed to send message. Please check your form and try again.");
+            }
+        } catch (error) {
+            console.error("Error sending message:", error);
+            alert("An error occurred while sending the message. Please try again later.");
+        }
+    };
+
+
     return (
         <>
             <div className='container' >
@@ -58,7 +97,7 @@ function Home() {
 
                         <h2 className="text-center text-3xl font-bold mb-8 py-8 text-gray-700">What We Deal With</h2>
 
-                        <div className="grid grid-cols-2 gap-4 mx-4 sm:grid-cols-3 lg:grid-cols-4 m-16 lg:px-32   gap-y-28  lg:mb-24">
+                        <div className="grid grid-cols-2 gap-4 mx-4 sm:grid-cols-3 lg:grid-cols-4 m-8 md:m-16 lg:px-32   gap-y-28  lg:mb-24">
                             
                         {category.map((service, index) => (
   <div key={index} className="relative text-center rounded justify-center lg:w-9/12 shadow-xl group">
@@ -189,7 +228,7 @@ function Home() {
                     >
                         {brands.map((promo) => (
                             <SwiperSlide key={promo.id}>
-                                <div className=" group relative h-24 mb-40 md:h-24 overflow-hidden flex items-center justify-center bg-white">
+                                <div className=" group relative h-24  mb-20 md:mb-40 md:h-24 overflow-hidden flex items-center justify-center bg-white">
                                     <a className="w-full h-full flex justify-center items-center">
                                         <img
                                             src={`../images/${promo.images}`}
@@ -241,9 +280,9 @@ function Home() {
 
                 {/* contactus */}
 
-                <div className="bg-[#E5f1E3] w-full text-center pt-40 mt-72">
+                <div className="bg-[#E5f1E3] w-full text-center pt-40 px-2 mt-60 md:mt-72">
                     <h2 className="text-3xl font-bold text-gray-900">Contact Us!</h2>
-                    <p className="mt-2 text-base text-gray-600">
+                    <p className="mt-2  text-base text-gray-600">
                         The promise to "get back to you as soon as possible" assures prompt attention to inquiries.
                     </p>
                 </div>
@@ -251,7 +290,7 @@ function Home() {
                 <div className="bg-[#E5f1E3] flex flex-col md:flex-row items-start justify-between p-6 md:p-16 max-w-full mx-auto lg:px-32 md:gap-16">
                     {/* Left Section: Contact Form */}
                     <div className="w-full md:w-1/2 mb-10 md:mb-0">
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={sendingmessage}>
                             {/* Name Field */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-700">Your Name *</label>
@@ -312,19 +351,19 @@ function Home() {
                             {/* Phone Number */}
                             <li className="flex items-center text-textcolor">
                                 <FiPhone className="h-6 w-6 text-blue" />
-                                <span className="ml-4 text-lg">470-601-1911</span>
+                                <span className="ml-4 text-sm md:text-lg">+97165532390</span>
                             </li>
 
                             {/* Email */}
                             <li className="flex items-center text-textcolor">
                                 <FiMail className="h-6 w-6 text-blue" />
-                                <span className="ml-4 text-lg">Pagedone1234@gmail.com</span>
+                                <span className="ml-4 text-sm md:text-lg">zahratalreefelectandsanitary@gmail.com</span>
                             </li>
 
                             {/* Address */}
                             <li className="flex items-center text-textcolor">
                                 <FiMapPin className="h-6 w-6 text-blue" />
-                                <span className="ml-4 text-lg">Al Nabbah , Sharjah - U A E</span>
+                                <span className="ml-4 text-sm md:text-lg">Al Nabbah , Sharjah - U A E</span>
                             </li>
                         </ul>
 
