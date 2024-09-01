@@ -20,11 +20,9 @@ function Home() {
         { images: ["ironmongerycat.jpg"], name: "IRONMONGERY" },
         { images: ["electricalcat.jpg"], name: "ELECTRICAL" },
         { images: ["toolscat.jpg"], name: "TOOLS" },
-       
         { images: ["powertoolscat.jpg"], name: "POWERTOOLS" },
         { images: ["pipecat.jpg"], name: "PIPES" },
         { images: ["fittingscat.jpg"], name: "FITTINGS" },
-        
         { images: ["paintsnew.jpg"], name: "OTHERS" },
 
     ];
