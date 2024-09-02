@@ -97,12 +97,15 @@ const Ironmongery = () => {
 
             {/* Call Button */}
             <a
-          href="tel:+971526346199"
-          className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
-        >
-          <img src="../images/callicon.png" alt="Call" className="w-16 h-16" />
-        </a>
-
+                href="tel:+971526346199"
+                className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
+            >
+                <img
+                    src="../images/callicon.png"
+                    alt="Call"
+                    className="w-16 h-16"
+                />
+            </a>
             <Footer />
         </>
     );
