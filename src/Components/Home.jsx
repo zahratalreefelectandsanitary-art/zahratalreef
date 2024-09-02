@@ -33,7 +33,7 @@ function Home() {
         { images: ["brand3.png"], name: "SANITERY ITEMS" },
         { images: ["brand4.png"], name: "SANITERY ITEMS" },
         { images: ["brand5.png"], name: "SANITERY ITEMS" },
-        { images: ["brand6.png"], name: "SANITERY ITEMS" },
+        { images: ["brand66.png"], name: "SANITERY ITEMS" },
         { images: ["brand7.png"], name: "SANITERY ITEMS" },
         { images: ["brand8.png"], name: "SANITERY ITEMS" },
         { images: ["brand9.png"], name: "SANITERY ITEMS" },
