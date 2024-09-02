@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-4 text-xs md:text-lg">
       <div className="container mx-auto px-6 lg:px-32">
         <div className="flex flex-col lg:flex-row justify-between">
-          <div className="mb-6 lg:mb-0">
+          <div className="text-sm mb-6 lg:mb-0">
             <p className="mt-2">
               Zahrat Al Reef Elect. & Sanitary Ware TR. LLC
               <br />
@@ -17,14 +17,15 @@ const Footer = () => {
               <br />
             
             </p>
-          </div>
+            <p className=''>©2024 all rights reserved. Designed by <a href="https://www.instagram.com/tri._design?igsh=MXMyNHVvb2Q5Z3U2eA==" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">TRIDezine</a></p>
+            </div>
 
           <div className="flex flex-row space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
+               className="text-background hover:text-gray-400"
             >
               <FaFacebookF size={24} />
             </a>
@@ -32,7 +33,7 @@ const Footer = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
+              className="text-background hover:text-gray-400"
             >
               <FaTwitter size={24} />
             </a>
@@ -40,7 +41,7 @@ const Footer = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
+               className="text-background hover:text-gray-400"
             >
               <FaInstagram size={24} />
             </a>
@@ -48,16 +49,18 @@ const Footer = () => {
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white"
+              className="text-background hover:text-gray-400"
             >
               <FaYoutube size={24} />
             </a>
           </div>
         </div>
       </div>
+      
     </footer>
+
     </>
   );
 };
 
-export default Footer;
+export default Footer;

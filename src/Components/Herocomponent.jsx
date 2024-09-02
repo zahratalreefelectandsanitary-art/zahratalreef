@@ -29,7 +29,7 @@ const HeroSection = () => {
                 data-aos="fade-up"
                 data-aos-delay="500"
             >
-                <a href="tel:+97165532390" className="bg-blue text-white text-sm sm:text-base md:text-lg font-semibold py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-full hover:bg-background hover:text-textcolor border-2 hover:border-textcolor transition">
+                <a href="tel:+971526346199" className="bg-blue text-white text-sm sm:text-base md:text-lg font-semibold py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-full hover:bg-background hover:text-textcolor border-2 hover:border-textcolor transition">
                     Call us now
                 </a>
                 <a href='/about' className="bg-white border-2 border-textcolor text-textcolor text-sm sm:text-base md:text-lg font-semibold py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-full hover:bg-gray-100 transition">

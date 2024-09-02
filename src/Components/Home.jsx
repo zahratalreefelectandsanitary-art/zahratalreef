@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Topbar from './Topbar'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
@@ -44,9 +44,13 @@ function Home() {
 
     ];
 
+    const [loading, setLoading] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
     const sendingmessage = async (event) => {
         event.preventDefault();
-        console.log("Form submission started");
+        setLoading(true);
+        setFormSubmitted(false);
 
         const formData = new FormData(event.target);
         formData.append("access_key", "bce32227-2e83-4843-9e17-32a4550b043c");
@@ -67,20 +71,23 @@ function Home() {
             });
 
             const result = await res.json();
-
-            console.log("Response:", result);
+            setLoading(false);
 
             if (result.success) {
                 alert("Message sent successfully!");
+                setFormSubmitted(true);
+                event.target.reset();  // Clear the form fields
             } else {
                 console.error("Failed to send message", result);
                 alert("Failed to send message. Please check your form and try again.");
             }
         } catch (error) {
+            setLoading(false);
             console.error("Error sending message:", error);
             alert("An error occurred while sending the message. Please try again later.");
         }
     };
+
 
 
     return (
@@ -290,60 +297,64 @@ function Home() {
                 <div className="bg-[#E5f1E3] flex flex-col md:flex-row items-start justify-between p-6 md:p-16 max-w-full mx-auto lg:px-32 md:gap-16">
                     {/* Left Section: Contact Form */}
                     <div className="w-full md:w-1/2 mb-10 md:mb-0">
-                        <form className="space-y-6" onSubmit={sendingmessage}>
-                            {/* Name Field */}
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">Your Name *</label>
-                                <input
-                                    type="text"
-                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                    placeholder="Enter your name"
-                                    required
-                                />
-                            </div>
+                    <form className="space-y-6" onSubmit={sendingmessage}>
+                        {/* Name Field */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Your Name *</label>
+                            <input
+                                type="text"
+                                name="name"
+                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                placeholder="Enter your name"
+                                required
+                            />
+                        </div>
 
-                            {/* Email Field */}
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">Email *</label>
-                                <input
-                                    type="email"
-                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                    placeholder="Enter your email"
-                                    required
-                                />
-                            </div>
+                        {/* Email Field */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Email *</label>
+                            <input
+                                type="email"
+                                name="email"
+                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
 
-                            {/* Phone Number Field */}
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">Phone Number *</label>
-                                <input
-                                    type="text"
-                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                    placeholder="Enter your phone number"
-                                    required
-                                />
-                            </div>
+                        {/* Phone Number Field */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Phone Number *</label>
+                            <input
+                                type="text"
+                                name="phone"
+                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                placeholder="Enter your phone number"
+                                required
+                            />
+                        </div>
 
-                            {/* Description Field */}
-                            <div>
-                                <label className="block text-sm font-medium text-gray-700">Description *</label>
-                                <textarea
-                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                    placeholder="Enter your message"
-                                    rows="4"
-                                    required
-                                ></textarea>
-                            </div>
+                        {/* Description Field */}
+                        <div>
+                            <label className="block text-sm font-medium text-gray-700">Description *</label>
+                            <textarea
+                                name="message"
+                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                placeholder="Enter your message"
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
 
-                            {/* Submit Button */}
-                            <button
-                                type="submit"
-                                className="w-full bg-blue text-white py-3 rounded-md shadow-md hover:bg-lightblue hover:text-white focus:ring-2 focus:ring-blue focus:ring-opacity-50 transition duration-300"
-                            >
-                                Send
-                            </button>
-                        </form>
-                    </div>
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            className="w-full bg-blue text-white py-3 rounded-md shadow-md hover:bg-blue-400 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
 
                     {/* Right Section: Contact Information and Map */}
                     <div className="w-full md:w-1/2 flex flex-col justify-start">
@@ -401,15 +412,11 @@ function Home() {
 
             {/* Call Button */}
             <a
-                href="tel:+971065532390"
-                className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
-            >
-                <img
-                    src="../images/callicon.png"
-                    alt="Call"
-                    className="w-16 h-16"
-                />
-            </a>
+          href="tel:+971526346199"
+          className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
+        >
+          <img src="../images/callicon.png" alt="Call" className="w-16 h-16" />
+        </a>
 
 
 

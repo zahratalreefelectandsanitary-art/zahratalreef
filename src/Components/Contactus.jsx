@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Topbar from "./Topbar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
 function ContactUs() {
+    const [loading, setLoading] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
+
     const sendingmessage = async (event) => {
         event.preventDefault();
-        console.log("Form submission started");
+        setLoading(true);
+        setFormSubmitted(false);
 
         const formData = new FormData(event.target);
         formData.append("access_key", "bce32227-2e83-4843-9e17-32a4550b043c");
@@ -28,16 +32,18 @@ function ContactUs() {
             });
 
             const result = await res.json();
-
-            console.log("Response:", result);
+            setLoading(false);
 
             if (result.success) {
                 alert("Message sent successfully!");
+                setFormSubmitted(true);
+                event.target.reset();  // Clear the form fields
             } else {
                 console.error("Failed to send message", result);
                 alert("Failed to send message. Please check your form and try again.");
             }
         } catch (error) {
+            setLoading(false);
             console.error("Error sending message:", error);
             alert("An error occurred while sending the message. Please try again later.");
         }
@@ -48,9 +54,7 @@ function ContactUs() {
             <Topbar />
             <Navbar />
 
-            <div   style={{ backgroundImage: 'linear-gradient(to bottom, #f5f5f5, #f2f4f7, #ecf3f7, #e6f3f5, #e2f3ef, #e2f3ef, #e2f3ef, #e2f3ef, #e6f3f5, #ecf3f7, #f2f4f7, #f5f5f5)' }}> 
-
-           
+            <div style={{ backgroundImage: 'linear-gradient(to bottom, #f5f5f5, #f2f4f7, #ecf3f7, #e6f3f5, #e2f3ef, #e2f3ef, #e2f3ef, #e2f3ef, #e6f3f5, #ecf3f7, #f2f4f7, #f5f5f5)' }}> 
 
             <div className="w-full text-center mt-40">
                 <h2 className="text-3xl font-bold text-gray-900">Contact Us!</h2>
@@ -58,7 +62,7 @@ function ContactUs() {
                     The promise to "get back to you as soon as possible" assures prompt attention to inquiries.
                 </p>
             </div>
-            <div className=" w-full flex flex-col md:flex-row items-start justify-between p-10 md:p-16 max-w-7xl mx-auto md:gap-16">
+            <div className="w-full flex flex-col md:flex-row items-start justify-between p-10 md:p-16 max-w-7xl mx-auto md:gap-16">
 
                 {/* Left Section: Contact Form */}
                 <div className="w-full md:w-1/2 mb-10 md:mb-0">
@@ -72,6 +76,7 @@ function ContactUs() {
                                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
                                 placeholder="Enter your name"
                                 required
+                                disabled={loading}
                             />
                         </div>
 
@@ -84,6 +89,7 @@ function ContactUs() {
                                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
                                 placeholder="Enter your email"
                                 required
+                                disabled={loading}
                             />
                         </div>
 
@@ -96,6 +102,7 @@ function ContactUs() {
                                 className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
                                 placeholder="Enter your phone number"
                                 required
+                                disabled={loading}
                             />
                         </div>
 
@@ -108,6 +115,7 @@ function ContactUs() {
                                 placeholder="Enter your message"
                                 rows="4"
                                 required
+                                disabled={loading}
                             ></textarea>
                         </div>
 
@@ -115,8 +123,9 @@ function ContactUs() {
                         <button
                             type="submit"
                             className="w-full bg-blue text-white py-3 rounded-md shadow-md hover:bg-blue-400 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+                            disabled={loading}
                         >
-                            Send Message
+                            {loading ? "Sending..." : "Send Message"}
                         </button>
                     </form>
                 </div>
@@ -127,13 +136,13 @@ function ContactUs() {
                         {/* Phone Number */}
                         <li className="flex items-center text-gray-700">
                             <FiPhone className="h-6 w-6 text-blue-500" />
-                            <span className="ml-4 text-sm md:text-lg">+971-65532390</span>
+                            <span className="ml-4 text-sm md:text-lg">+97165532390</span>
                         </li>
 
                         {/* Email */}
                         <li className="flex items-center text-gray-700">
                             <FiMail className="h-6 w-6 text-blue-500" />
-                            <span className="ml-4 text-sm md:text-lg">Pagedone1234@gmail.com</span>
+                            <span className="ml-4 text-sm md:text-lg">zahratalreefelectandsanitary@gmail.com</span>
                         </li>
 
                         {/* Address */}
@@ -145,16 +154,16 @@ function ContactUs() {
 
                     {/* Google Map */}
                     <div className="mt-8 w-full rounded-lg overflow-hidden">
-                            <iframe
-                                title="Google Map"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204881.84468531334!2d55.19500005085082!3d25.363886025259055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIxJzUwLjAiTiA1NcKwMjMnNDIuMCJF!5e0!3m2!1sen!2sus!4v1693166889369935!5m2!1sen!2sus"
-                                width="100%"
-                                height="250"
-                                className="border-0"
-                                allowFullScreen=""
-                                loading="lazy"
-                            ></iframe>
-                        </div>
+                        <iframe
+                            title="Google Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d204881.84468531334!2d55.19500005085082!3d25.363886025259055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDIxJzUwLjAiTiA1NcKwMjMnNDIuMCJF!5e0!3m2!1sen!2sus!4v1693166889369935!5m2!1sen!2sus"
+                            width="100%"
+                            height="250"
+                            className="border-0"
+                            allowFullScreen=""
+                            loading="lazy"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
 
@@ -174,15 +183,11 @@ function ContactUs() {
 
             {/* Call Button */}
             <a
-                href="tel:+971065532390"
-                className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
-            >
-                <img
-                    src="../images/callicon.png"
-                    alt="Call"
-                    className="w-16 h-16"
-                />
-            </a>
+          href="tel:+971526346199"
+          className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
+        >
+          <img src="../images/callicon.png" alt="Call" className="w-16 h-16" />
+        </a>
             </div>
             <Footer />
         </>

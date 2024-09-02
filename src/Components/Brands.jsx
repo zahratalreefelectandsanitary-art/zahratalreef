@@ -16,7 +16,7 @@ const Brands = () => {
         { images: ["brand3.png"], name: "SANITERY ITEMS" },
         { images: ["brand4.png"], name: "SANITERY ITEMS" },
         { images: ["brand5.png"], name: "SANITERY ITEMS" },
-        { images: ["brand6.png"], name: "SANITERY ITEMS" },
+        { images: ["brand66.png"], name: "SANITERY ITEMS" },
         { images: ["brand7.png"], name: "SANITERY ITEMS" },
         { images: ["brand8.png"], name: "SANITERY ITEMS" },
         { images: ["brand9.png"], name: "SANITERY ITEMS" },
@@ -30,7 +30,7 @@ const Brands = () => {
         <>
             <Topbar />
             <Navbar />
-            <div  className=" w-full mx-auto py-20 px-4 mt-20"  style={{ backgroundImage: 'linear-gradient(to bottom, #f5f5f5, #f2f4f7, #ecf3f7, #e6f3f5, #e2f3ef, #e2f3ef, #e2f3ef, #e2f3ef, #e6f3f5, #ecf3f7, #f2f4f7, #f5f5f5)' }}>
+            <div  className=" w-full mx-auto py-20 px-4 mt-20 bg-white">
                 <h2
                     className="text-center text-xm md:text-3xl  font-bold mb-8"
                     data-aos="fade-up"
@@ -73,15 +73,11 @@ const Brands = () => {
 
             {/* Call Button */}
             <a
-                href="tel:+971065532390"
-                className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
-            >
-                <img
-                    src="../images/callicon.png"
-                    alt="Call"
-                    className="w-16 h-16"
-                />
-            </a>
+          href="tel:+971526346199"
+          className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
+        >
+          <img src="../images/callicon.png" alt="Call" className="w-16 h-16" />
+        </a>
 
             <Footer />
         </>
