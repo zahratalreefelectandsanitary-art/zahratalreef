@@ -19,12 +19,12 @@ const Navbar = () => {
     return (
         <nav className="bg-background fixed top-8 md:top-9 left-0 w-full z-50">
             <div className="container mx-auto px-4 sm:px-24 py-3 flex justify-between items-center">
-                <div className='py-2' data-aos="fade-down" data-aos-once="true">
+                <a href='/' className='py-2' data-aos="fade-down" data-aos-once="true">
                     <h1 className="text-4xl font-bold text-blue mt-2">
                         زهرة <span className='text-yellow'>الريف</span>
                     </h1>
                     <p className='font-bold'>Elect. & Sanitary Ware TR.LLC</p>
-                </div>
+                </a>
 
                 <div className="hidden lg:flex items-center space-x-6 font-bold" data-aos="fade-down" data-aos-once="true" data-aos-delay="300">
                     <a href="/" className="text-textcolor hover:text-yellow">HOME</a>
