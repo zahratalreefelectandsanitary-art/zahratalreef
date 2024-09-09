@@ -274,7 +274,7 @@ function Home() {
                             </p>
 
                             <a
-                                href="tel:+97165532390"
+                                href="tel:+971526346199"
                                 className="bg-blue text-xs md:text-base lg:text-lg text-white py-2 md:py-3 px-6 md:px-8 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 text-center font-semibold"
                             >
                                 Call Us Now
