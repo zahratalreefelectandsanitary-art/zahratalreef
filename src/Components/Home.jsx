@@ -29,18 +29,18 @@ function Home() {
     ];
 
     const brands = [
-        { images: ["brand1.png"], name: "SANITERY ITEMS" },
-        { images: ["brand2.png"], name: "SANITERY ITEMS" },
-        { images: ["brand3.png"], name: "SANITERY ITEMS" },
-        { images: ["brand4.png"], name: "SANITERY ITEMS" },
-        { images: ["brand5.png"], name: "SANITERY ITEMS" },
-        { images: ["brand66.png"], name: "SANITERY ITEMS" },
-        { images: ["brand7.png"], name: "SANITERY ITEMS" },
-        { images: ["brand8.png"], name: "SANITERY ITEMS" },
-        { images: ["brand9.png"], name: "SANITERY ITEMS" },
-        { images: ["brand10.png"], name: "SANITERY ITEMS" },
-        { images: ["brand11.png"], name: "SANITERY ITEMS" },
-        { images: ["brand12.png"], name: "SANITERY ITEMS" },
+        { images: ["brand1.png"], },
+        { images: ["brand2.png"], },
+        { images: ["brand3.png"], },
+        { images: ["brand4.png"], },
+        { images: ["brand5.png"],  },
+        { images: ["brand66.png"], },
+        { images: ["brand7.png"],},
+        { images: ["brand8.png"],  },
+        { images: ["brand9.png"],},
+        { images: ["brand10.png"],  },
+        { images: ["brand11.png"],  },
+        { images: ["brand12.png"], },
 
 
     ];
@@ -250,13 +250,13 @@ function Home() {
                         {brands.map((promo) => (
                             <SwiperSlide key={promo.id}>
                                 <div className=" group relative h-24  mb-20 md:mb-40 md:h-24 overflow-hidden flex items-center justify-center bg-white">
-                                    <a className="w-full h-full flex justify-center items-center">
+                                    <div className="w-full h-full flex justify-center items-center">
                                         <img
                                             src={`../images/${promo.images}`}
                                             alt={promo.name}
                                             className="w-auto h-20 object-contain"
                                         />
-                                    </a>
+                                    </div>
                                 </div>
                             </SwiperSlide>
                         ))}

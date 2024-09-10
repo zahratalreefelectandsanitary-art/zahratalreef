@@ -11,18 +11,18 @@ const Brands = () => {
     }, []);
 
     const brands = [
-        { images: ["brand1.png"], name: "SANITERY ITEMS" },
-        { images: ["brand2.png"], name: "SANITERY ITEMS" },
-        { images: ["brand3.png"], name: "SANITERY ITEMS" },
-        { images: ["brand4.png"], name: "SANITERY ITEMS" },
-        { images: ["brand5.png"], name: "SANITERY ITEMS" },
-        { images: ["brand66.png"], name: "SANITERY ITEMS" },
-        { images: ["brand7.png"], name: "SANITERY ITEMS" },
-        { images: ["brand8.png"], name: "SANITERY ITEMS" },
-        { images: ["brand9.png"], name: "SANITERY ITEMS" },
-        { images: ["brand10.png"], name: "SANITERY ITEMS" },
-        { images: ["brand11.png"], name: "SANITERY ITEMS" },
-        { images: ["brand12.png"], name: "SANITERY ITEMS" },
+        { images: ["brand1.png"],  },
+        { images: ["brand2.png"], },
+        { images: ["brand3.png"],  },
+        { images: ["brand4.png"],  },
+        { images: ["brand5.png"],  },
+        { images: ["brand66.png"], },
+        { images: ["brand7.png"],  },
+        { images: ["brand8.png"], },
+        { images: ["brand9.png"],  },
+        { images: ["brand10.png"], },
+        { images: ["brand11.png"], },
+        { images: ["brand12.png"], },
       
     ];
 
@@ -46,7 +46,7 @@ const Brands = () => {
                             key={index}
                             className="overflow-hidden  w-full sm:w-11/12 lg:w-12/12 mx-auto"
                             data-aos="fade-up"
-                            data-aos-delay={index * 100}
+                            data-aos-delay={index * 50}
                         >
                             <img
                                 src={`../images/${product.images}`}
