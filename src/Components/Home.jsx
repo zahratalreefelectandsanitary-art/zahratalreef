@@ -95,12 +95,12 @@ function Home() {
         <>
 
             <Helmet>
-                <title>Zahrat Al Reef - Electrical, Sanitary & Hardware Solutions</title>
+                <title>Zahrat AlReef Elect. & Sanitary Ware TR.LLC</title>
                 <meta name="description" content="Zahrat Al Reef, established in 2006, offers a wide range of electrical, sanitary, and hardware products in the UAE. Your trusted partner for high-quality supplies and exceptional service." />
                 <meta name="keywords" content="Zahrat Al Reef, electrical supplies, sanitaryware, hardware products, power tools, water heaters, gypsum ceiling tiles, UAE, Sharjah, quality tools, fittings" />
                 <meta name="robots" content="index, follow" />
-                <meta name="author" content="Zahrat Al Reef" />
-                <meta property="og:title" content="Zahrat Al Reef - Electrical, Sanitary & Hardware Solutions" />
+                <meta name="author" content="Zahrat AlReef Elect. & Sanitary Ware TR.LLC" />
+                <meta property="og:title" content="Zahrat AlReef Elect. & Sanitary Ware TR.LLC" />
                 <meta property="og:description" content="Discover high-quality electrical, sanitary, and hardware products at Zahrat Al Reef. Serving the UAE since 2006 with top-notch solutions for contractors, businesses, and individuals." />
                 <meta property="og:url" content="https://zahratalreefelectricalandsanitaryware.shop" />
                 <meta property="og:type" content="website" />
