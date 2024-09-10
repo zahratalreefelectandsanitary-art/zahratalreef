@@ -9,6 +9,7 @@ import HeroSection from './Herocomponent'
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Helmet } from 'react-helmet';
 
 
 function Home() {
@@ -92,6 +93,19 @@ function Home() {
 
     return (
         <>
+
+            <Helmet>
+                <title>Zahrat Al Reef - Electrical, Sanitary & Hardware Solutions</title>
+                <meta name="description" content="Zahrat Al Reef, established in 2006, offers a wide range of electrical, sanitary, and hardware products in the UAE. Your trusted partner for high-quality supplies and exceptional service." />
+                <meta name="keywords" content="Zahrat Al Reef, electrical supplies, sanitaryware, hardware products, power tools, water heaters, gypsum ceiling tiles, UAE, Sharjah, quality tools, fittings" />
+                <meta name="robots" content="index, follow" />
+                <meta name="author" content="Zahrat Al Reef" />
+                <meta property="og:title" content="Zahrat Al Reef - Electrical, Sanitary & Hardware Solutions" />
+                <meta property="og:description" content="Discover high-quality electrical, sanitary, and hardware products at Zahrat Al Reef. Serving the UAE since 2006 with top-notch solutions for contractors, businesses, and individuals." />
+                <meta property="og:url" content="https://zahratalreefelectricalandsanitaryware.shop" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://zahratalreefelectricalandsanitaryware.shop/images/shop.jpg" />
+            </Helmet>
             <div className='container' >
                 <Topbar />
                 <Navbar />
@@ -105,26 +119,26 @@ function Home() {
                         <h2 className="text-center text-3xl font-bold mb-8 py-8 text-gray-700">What We Deal With</h2>
 
                         <div className="grid grid-cols-2 gap-4 mx-4 sm:grid-cols-3 lg:grid-cols-4 m-8 md:m-16 lg:px-32   gap-y-28  lg:mb-24">
-                            
-                        {category.map((service, index) => (
-  <div key={index} className="relative text-center rounded justify-center lg:w-9/12 shadow-xl group">
-    <img
-      className="w-full h-48 lg:h-56 object-cover transition-transform duration-300 transform group-hover:scale-105"
-      src={`../images/${service.images}`}
-      alt={service.name}
-    />
-    <div className="absolute bottom-[-80px] w-full flex justify-center py-4">
-      <div className="bg-white min-w-[80%] px-4 py-3 w-5/5 max-w-sm sm:w-3/4 lg:w-3/3">
-        <h2 className="font-bold text-xs sm:text-lg mb-2">{service.name}</h2>
-        <Link to={`/products/${service.name}`}>
-        <button className="bg-yellow text-black font-bold py-2 px-1 w-full text-xs sm:text-sm">
-          View
-        </button>
-        </Link>
-      </div>
-    </div>
-  </div>
-))}
+
+                            {category.map((service, index) => (
+                                <div key={index} className="relative text-center rounded justify-center lg:w-9/12 shadow-xl group">
+                                    <img
+                                        className="w-full h-48 lg:h-56 object-cover transition-transform duration-300 transform group-hover:scale-105"
+                                        src={`../images/${service.images}`}
+                                        alt={service.name}
+                                    />
+                                    <div className="absolute bottom-[-80px] w-full flex justify-center py-4">
+                                        <div className="bg-white min-w-[80%] px-4 py-3 w-5/5 max-w-sm sm:w-3/4 lg:w-3/3">
+                                            <h2 className="font-bold text-xs sm:text-lg mb-2">{service.name}</h2>
+                                            <Link to={`/products/${service.name}`}>
+                                                <button className="bg-yellow text-black font-bold py-2 px-1 w-full text-xs sm:text-sm">
+                                                    View
+                                                </button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
 
                         </div>
 
@@ -297,64 +311,64 @@ function Home() {
                 <div className="bg-[#E5f1E3] flex flex-col md:flex-row items-start justify-between p-6 md:p-16 max-w-full mx-auto lg:px-32 md:gap-16">
                     {/* Left Section: Contact Form */}
                     <div className="w-full md:w-1/2 mb-10 md:mb-0">
-                    <form className="space-y-6" onSubmit={sendingmessage}>
-                        {/* Name Field */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Your Name *</label>
-                            <input
-                                type="text"
-                                name="name"
-                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                placeholder="Enter your name"
-                                required
-                            />
-                        </div>
+                        <form className="space-y-6" onSubmit={sendingmessage}>
+                            {/* Name Field */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700">Your Name *</label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                    placeholder="Enter your name"
+                                    required
+                                />
+                            </div>
 
-                        {/* Email Field */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Email *</label>
-                            <input
-                                type="email"
-                                name="email"
-                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                placeholder="Enter your email"
-                                required
-                            />
-                        </div>
+                            {/* Email Field */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700">Email *</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </div>
 
-                        {/* Phone Number Field */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Phone Number *</label>
-                            <input
-                                type="text"
-                                name="phone"
-                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                placeholder="Enter your phone number"
-                                required
-                            />
-                        </div>
+                            {/* Phone Number Field */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700">Phone Number *</label>
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                    placeholder="Enter your phone number"
+                                    required
+                                />
+                            </div>
 
-                        {/* Description Field */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700">Description *</label>
-                            <textarea
-                                name="message"
-                                className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
-                                placeholder="Enter your message"
-                                rows="4"
-                                required
-                            ></textarea>
-                        </div>
+                            {/* Description Field */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700">Description *</label>
+                                <textarea
+                                    name="message"
+                                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 text-sm"
+                                    placeholder="Enter your message"
+                                    rows="4"
+                                    required
+                                ></textarea>
+                            </div>
 
-                        {/* Submit Button */}
-                        <button
-                            type="submit"
-                            className="w-full bg-blue text-white py-3 rounded-md shadow-md hover:bg-blue-400 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
-                        >
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                            {/* Submit Button */}
+                            <button
+                                type="submit"
+                                className="w-full bg-blue text-white py-3 rounded-md shadow-md hover:bg-blue-400 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
 
                     {/* Right Section: Contact Information and Map */}
                     <div className="w-full md:w-1/2 flex flex-col justify-start">
@@ -398,29 +412,29 @@ function Home() {
 
                 {/* Call Link */}
                 <a
-                href="https://wa.me/+9710526346199"
-                className="fixed bottom-4 right-4 p-3 transition duration-300 z-50"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <img
-                    src="../images/whatsapp.png"
-                    alt="WhatsApp"
-                    className="w-20 h-20"
-                />
-            </a>
+                    href="https://wa.me/+9710526346199"
+                    className="fixed bottom-4 right-4 p-3 transition duration-300 z-50"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="../images/whatsapp.png"
+                        alt="WhatsApp"
+                        className="w-20 h-20"
+                    />
+                </a>
 
-            {/* Call Button */}
-            <a
-                href="tel:+971526346199"
-                className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
-            >
-                <img
-                    src="../images/callicon.png"
-                    alt="Call"
-                    className="w-16 h-16"
-                />
-            </a>
+                {/* Call Button */}
+                <a
+                    href="tel:+971526346199"
+                    className="fixed bottom-24 right-6 p-3 transition duration-300 z-50"
+                >
+                    <img
+                        src="../images/callicon.png"
+                        alt="Call"
+                        className="w-16 h-16"
+                    />
+                </a>
 
 
 
@@ -429,7 +443,7 @@ function Home() {
 
             </div>
 
-           
+
 
             <Footer />
         </>
