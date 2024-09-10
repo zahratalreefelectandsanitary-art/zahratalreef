@@ -253,7 +253,7 @@ function Home() {
                                     <div className="w-full h-full flex justify-center items-center">
                                         <img
                                             src={`../images/${promo.images}`}
-                                            alt={promo.name}
+                                            alt={'brandname'}
                                             className="w-auto h-20 object-contain"
                                         />
                                     </div>
