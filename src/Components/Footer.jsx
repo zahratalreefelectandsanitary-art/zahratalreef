@@ -17,12 +17,12 @@ const Footer = () => {
                 <br />
 
               </p>
-              <p className=''>©2024 all rights reserved. Designed by <a href="https://www.instagram.com/tri._design?igsh=MXMyNHVvb2Q5Z3U2eA==" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">TRIDesign</a></p>
+              <p className=''>©2024 all rights reserved. Designed by <a href="https://www.instagram.com/tri._design?igsh=MXMyNHVvb2Q5Z3U2eA==" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">TRIDezign</a></p>
             </div>
 
             <div className="flex flex-row space-x-4">
               <a
-                area-label="Facebook"
+                aria-label="Facebook"
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -31,7 +31,7 @@ const Footer = () => {
                 <FaFacebookF size={24} />
               </a>
               <a
-               area-label="Twitter"
+                aria-label="Twitter"
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -40,7 +40,7 @@ const Footer = () => {
                 <FaTwitter size={24} />
               </a>
               <a
-               area-label="Instagram"
+                aria-label="Instagram"
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,7 +49,7 @@ const Footer = () => {
                 <FaInstagram size={24} />
               </a>
               <a
-               area-label="Youtube"
+                aria-label="Youtube"
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -57,7 +57,8 @@ const Footer = () => {
               >
                 <FaYoutube size={24} />
               </a>
-            </div>
+            </div>
+
           </div>
         </div>
 
