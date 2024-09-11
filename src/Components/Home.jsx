@@ -156,9 +156,9 @@ function Home() {
                                 </div>
                                 <div className="w-full h-full md:w-1/2 lg:pr-20" data-aos="fade-up" >
                                     <h1 className="text-4xl font-bold mb-4" data-aos="fade-up" >Welcome to Zahrat <span className='text-yellow'>Al Reef</span> </h1>
-                                    <h2 className="text-xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200" >UAE's Trusted Electrical & Sanitary Ware Solution</h2>
+                                    <h2 className="text-xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200" >Zahrat AlReef Electrical and Sanitary Ware TR.LLC is UAE's Trusted Electrical & Sanitary Ware Solution</h2>
                                     <p className="text-lg mb-4" data-aos="fade-up" data-aos-delay="300">
-                                        Established in 2006, Zahrat Al Reef has proudly served the UAE with a wide range of products, from electrical supplies to sanitary items, tools, and much more. With 18 years of experience, we are a one-stop shop for quality products and exceptional service.
+                                        Established in 2006, Zahrat Al Reef Electrical and Sanitary Ware TR.LLC has proudly served the UAE with a wide range of products, from electrical supplies to sanitary items, tools, water heater, Paints and much more. With 18 years of experience, we are a one-stop shop for quality products and exceptional service.
                                     </p>
                                     <p className="text-lg mb-6" data-aos="fade-up" data-aos-delay="300">
                                         Our offerings include ironmongery, sanitary items, tools, power tools, electrical supplies, water heaters, gypsum ceiling tiles, paints, fittings, and PVC fittings, all designed to meet the diverse needs of our customers.
