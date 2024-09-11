@@ -35,7 +35,7 @@ function Aboutsection() {
                             <img
                                 src="../images/arabi.png"
                                 alt="Zahrat Al Reef Products Overview"
-                                className="w-full h-auto object-cover lg:max-w-[80%] lg:max-h-[300px] lg:mx-auto"
+                                className="w-full h-auto object-cover lg:max-w-[80%] lg:max-h-[300px] xl:max-h-[350px] lg:mx-auto"
                                 loading="lazy"
                             />
                         </div>
