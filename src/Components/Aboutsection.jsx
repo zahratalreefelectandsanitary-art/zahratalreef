@@ -31,11 +31,11 @@ function Aboutsection() {
 
                     <div className="flex lg:flex-row items-center lg:items-start mb-12">
                         {/* Image Section */}
-                        <div className="lg:flex-1 mt-8 xl:mt-4 lg:mt-0 min-h-[300px] lg:block hidden">
+                        <div className="lg:flex-1 mt-8 xl:mt-2 lg:mt-0 min-h-[300px] lg:block hidden">
                             <img
                                 src="../images/arabi.png"
                                 alt="Zahrat Al Reef Products Overview"
-                                className="w-full h-auto object-cover lg:max-w-[80%] lg:max-h-[300px] xl:max-h-[350px] lg:mx-auto"
+                                className="w-full h-auto object-cover lg:max-w-[80%] lg:max-h-[300px] xl:max-h-[320px] lg:mx-auto"
                                 loading="lazy"
                             />
                         </div>
