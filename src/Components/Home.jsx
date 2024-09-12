@@ -102,9 +102,9 @@ function Home() {
                 <meta name="author" content="Zahrat AlReef Elect. & Sanitary Ware TR.LLC" />
                 <meta property="og:title" content="Zahrat AlReef Elect. & Sanitary Ware TR.LLC" />
                 <meta property="og:description" content="Discover high-quality electrical, sanitary, and hardware products at Zahrat Al Reef. Serving the UAE since 2006 with top-notch solutions for contractors, businesses, and individuals." />
-                <meta property="og:url" content="https://zahratalreefelectricalandsanitaryware.shop" />
+                <meta property="og:url" content="https://zahratalreeftrading.com" />
                 <meta property="og:type" content="website" />
-                <meta property="og:image" content="https://zahratalreefelectricalandsanitaryware.shop/images/shop.jpg" />
+                <meta property="og:image" content="https://zahratalreeftrading.com/images/shop.jpg" />
             </Helmet>
             <div className='container' >
                 <Topbar />
@@ -156,7 +156,7 @@ function Home() {
                                 </div>
                                 <div className="w-full h-full md:w-1/2 lg:pr-20" data-aos="fade-up" >
                                     <h1 className="text-4xl font-bold mb-4" data-aos="fade-up" >Welcome to Zahrat <span className='text-yellow'>Al Reef</span> </h1>
-                                    <h2 className="text-xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200" >Zahrat AlReef Electrical and Sanitary Ware TR.LLC is UAE's Trusted Electrical & Sanitary Ware Solution</h2>
+                                    <h2 className="text-xl font-semibold mb-6" data-aos="fade-up" data-aos-delay="200" >Zahrat AlReef Elect & Sanitary Ware TR.LLC is UAE's Trusted Electrical & Sanitary Ware Solution</h2>
                                     <p className="text-lg mb-4" data-aos="fade-up" data-aos-delay="300">
                                         Established in 2006, Zahrat Al Reef Electrical and Sanitary Ware TR.LLC has proudly served the UAE with a wide range of products, from electrical supplies to sanitary items, tools, water heater, Paints and much more. With 18 years of experience, we are a one-stop shop for quality products and exceptional service.
                                     </p>
