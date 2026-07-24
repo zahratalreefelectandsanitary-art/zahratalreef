@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Powertools = () => {
 
@@ -22,6 +23,15 @@ const Powertools = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Power Tools | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Browse power tools from Zahrat Al Reef in UAE — drills, grinders, circular saws, and more. Professional-grade power tools for contractors and tradespeople in Sharjah." />
+                <meta property="og:title" content="Power Tools | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Professional power tools in Sharjah, UAE. Zahrat Al Reef supplies drills, grinders, saws and more for contractors and businesses." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/powertools" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/powertools" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

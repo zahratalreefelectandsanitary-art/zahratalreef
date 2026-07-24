@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Pipes = () => {
 
@@ -20,6 +21,15 @@ const Pipes = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Pipes &amp; Plumbing Pipes | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Find quality pipes from Zahrat Al Reef in UAE — UPVC, CPVC, PPR, and metal pipes for plumbing and construction. Trusted pipe supplier in Sharjah for 18+ years." />
+                <meta property="og:title" content="Pipes &amp; Plumbing Pipes | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="UPVC, CPVC, PPR and metal pipes in Sharjah, UAE. Zahrat Al Reef supplies quality pipes for plumbing and construction." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/pipes" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/pipes" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

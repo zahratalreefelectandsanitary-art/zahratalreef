@@ -1,7 +1,7 @@
 import React from 'react'
 import Topbar from './Topbar'
 import Navbar from './Navbar'
-
+import { Helmet } from 'react-helmet-async';
 import Footer from './Footer';
 
 function Aboutsection() {
@@ -16,6 +16,15 @@ function Aboutsection() {
 
     return (
         <>
+        <Helmet>
+            <title>About Us | Zahrat Al Reef Elect. &amp; Sanitary Ware TR.LLC</title>
+            <meta name="description" content="Learn about Zahrat Al Reef — over 18 years of trusted supply of electrical, sanitary, ironmongery, tools, and hardware products across the UAE and Sharjah." />
+            <meta property="og:title" content="About Zahrat Al Reef Elect. &amp; Sanitary Ware TR.LLC" />
+            <meta property="og:description" content="18+ years of trusted supply of electrical, sanitary, and hardware products across the UAE. Serving contractors, businesses, and individuals since 2006." />
+            <meta property="og:url" content="https://www.zahratalreeftrading.com/about" />
+            <meta property="og:type" content="website" />
+            <link rel="canonical" href="https://www.zahratalreeftrading.com/about" />
+        </Helmet>
         <Topbar />
         <Navbar />
 

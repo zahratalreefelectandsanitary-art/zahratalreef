@@ -3,6 +3,7 @@ import Topbar from "./Topbar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import { Helmet } from 'react-helmet-async';
 
 function ContactUs() {
     const [loading, setLoading] = useState(false);
@@ -52,6 +53,15 @@ function ContactUs() {
 
     return (
         <>
+            <Helmet>
+                <title>Contact Us | Zahrat Al Reef Elect. &amp; Sanitary Ware TR.LLC</title>
+                <meta name="description" content="Get in touch with Zahrat Al Reef in Sharjah, UAE. Call, email, or visit us for electrical, sanitary, and hardware product inquiries. We respond promptly." />
+                <meta property="og:title" content="Contact Zahrat Al Reef | Sharjah, UAE" />
+                <meta property="og:description" content="Reach out to Zahrat Al Reef for electrical, sanitary, and hardware supplies in the UAE. Phone, email, and location available." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/contactus" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/contactus" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

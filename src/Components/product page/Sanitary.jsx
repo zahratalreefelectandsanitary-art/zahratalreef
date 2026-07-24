@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Sanitaryware = () => {
   
@@ -26,6 +27,15 @@ const Sanitaryware = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Sanitaryware Products | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Browse sanitaryware products from Zahrat Al Reef in the UAE — basins, faucets, shower sets, water heaters, and more. Trusted sanitary supplier in Sharjah for over 18 years." />
+                <meta property="og:title" content="Sanitaryware Products | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Quality sanitary ware in Sharjah, UAE. Zahrat Al Reef supplies basins, faucets, showers, and more to contractors and businesses." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/sanitaryware" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/sanitaryware" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

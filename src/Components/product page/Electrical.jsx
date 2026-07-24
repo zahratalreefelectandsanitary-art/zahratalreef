@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Product = () => {
 
@@ -23,6 +24,15 @@ const Product = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Electrical Products | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Buy high-quality electrical products in UAE from Zahrat Al Reef — cables, conduits, switches, and more from brands like DUCAB, ABB, Legrand, Alfanar, and NCI." />
+                <meta property="og:title" content="Electrical Products | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Reliable electrical supplies in Sharjah, UAE. Zahrat Al Reef stocks DUCAB, ABB, Legrand, Alfanar and more for contractors and businesses." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/electrical" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/electrical" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Fittings = () => {
 
@@ -15,6 +16,15 @@ const Fittings = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Pipe Fittings &amp; Plumbing | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Browse pipe fittings and plumbing supplies from Zahrat Al Reef in UAE — connectors, elbows, valves, and more. Reliable fittings supplier in Sharjah for plumbers and contractors." />
+                <meta property="og:title" content="Pipe Fittings &amp; Plumbing Supplies | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Quality pipe fittings in Sharjah, UAE. Zahrat Al Reef supplies connectors, elbows, valves, and fittings for plumbers and contractors." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/fittings" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/fittings" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Others = () => {
 
@@ -25,6 +26,15 @@ const Others = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Paints, Adhesives &amp; Other Supplies | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Explore paints, adhesives, sealants, and other building supplies from Zahrat Al Reef in UAE. Your one-stop shop for hardware and construction materials in Sharjah." />
+                <meta property="og:title" content="Paints &amp; Other Building Supplies | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Paints, adhesives, sealants, and misc building supplies in Sharjah, UAE. Zahrat Al Reef — your trusted supplier for 18+ years." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/others" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/others" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

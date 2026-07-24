@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Ironmongery = () => {
 
@@ -23,6 +24,15 @@ const Ironmongery = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Ironmongery Products | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Shop ironmongery products from Zahrat Al Reef in UAE — door hardware, locks, hinges, padlocks, and more. Trusted ironmongery supplier in Sharjah for contractors and builders." />
+                <meta property="og:title" content="Ironmongery Products | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Quality ironmongery supplies in Sharjah, UAE. Door hardware, locks, hinges, and fixings for contractors and construction projects." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/ironmongery" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/ironmongery" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

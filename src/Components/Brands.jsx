@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const Brands = () => {
     useEffect(() => {
@@ -28,6 +29,15 @@ const Brands = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Our Brands | Zahrat Al Reef Elect. &amp; Sanitary Ware TR.LLC</title>
+                <meta name="description" content="Explore the trusted brands carried by Zahrat Al Reef in the UAE — DUCAB, ABB, Legrand, Alfanar, and more. Top-quality electrical, sanitary and hardware brands." />
+                <meta property="og:title" content="Trusted Brands | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Zahrat Al Reef stocks leading brands including DUCAB, ABB, Legrand, Alfanar, and more for electrical, sanitary, and hardware needs across the UAE." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/brands" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/brands" />
+            </Helmet>
             <Topbar />
             <Navbar />
             <div  className=" w-full mx-auto py-20 px-4 mt-20 bg-white">

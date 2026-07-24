@@ -2,6 +2,7 @@ import React from 'react';
 import Topbar from '../Topbar';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { Helmet } from 'react-helmet-async';
 
 const Tools = () => {
 
@@ -23,6 +24,15 @@ const Tools = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Hand Tools &amp; Hardware | Zahrat Al Reef UAE</title>
+                <meta name="description" content="Shop hand tools and hardware from Zahrat Al Reef in UAE — wrenches, hammers, cutting tools, and more. Trusted hardware supplier in Sharjah for contractors and professionals." />
+                <meta property="og:title" content="Hand Tools &amp; Hardware | Zahrat Al Reef UAE" />
+                <meta property="og:description" content="Quality hand tools and hardware supplies in Sharjah, UAE. Zahrat Al Reef serves contractors, businesses, and individuals with premium tools." />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/products/tools" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/products/tools" />
+            </Helmet>
             <Topbar />
             <Navbar />
 

@@ -9,7 +9,7 @@ import HeroSection from './Herocomponent'
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 
 function Home() {
@@ -104,9 +104,10 @@ function Home() {
                 <meta name="author" content="Zahrat Al Reef Elect. & Sanitary Ware TR.LLC" />
                 <meta property="og:title" content="Zahrat Al Reef Elect. & Sanitary Ware TR.LLC" />
                 <meta property="og:description" content="Discover high-quality electrical, sanitary, and hardware products at Zahrat Al Reef. Serving the UAE since 2006 with top-notch solutions for contractors, businesses, and individuals." />
-                <meta property="og:url" content="https://zahratalreeftrading.com" />
+                <meta property="og:url" content="https://www.zahratalreeftrading.com/" />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content="https://zahratalreeftrading.com/images/shop.jpg" />
+                <link rel="canonical" href="https://www.zahratalreeftrading.com/" />
             </Helmet>
             <div className='container' >
                 <Topbar />
