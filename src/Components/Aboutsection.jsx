@@ -1,7 +1,7 @@
 import React from 'react'
 import Topbar from './Topbar'
 import Navbar from './Navbar'
-import { FaWrench, FaPaintRoller, FaTools, FaLightbulb, FaShower, FaDoorClosed, FaBolt, FaThermometerHalf } from 'react-icons/fa';
+
 import Footer from './Footer';
 
 function Aboutsection() {
@@ -67,7 +67,7 @@ function Aboutsection() {
                         >
                             <img
                                 src={`../images/${product.images}`}
-                                alt={`Product image for ${product.name}`}
+                                alt={`${product.name} - Zahrat Al Reef`}
                                 className="w-full h-full object-cover"
                                 loading="lazy"
                             />

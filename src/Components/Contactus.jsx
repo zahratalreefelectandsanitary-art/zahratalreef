@@ -6,6 +6,7 @@ import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
 function ContactUs() {
     const [loading, setLoading] = useState(false);
+    // eslint-disable-next-line no-unused-vars
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     const sendingmessage = async (event) => {

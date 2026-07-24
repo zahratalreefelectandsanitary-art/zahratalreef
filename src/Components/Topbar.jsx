@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FiPhone, FiClock } from "react-icons/fi"; // Feather Icons
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa"; // FontAwesome Icons
 
+
 const Topbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className=" bg-blue text-white text-xs md:text-sm font-normal fixed top-0 left-0 w-full z-50">

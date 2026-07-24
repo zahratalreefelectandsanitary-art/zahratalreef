@@ -87,7 +87,7 @@ data-aos-delay="400"
 >
 <img 
     src="../images/heroimg.png" 
-    alt="Hero image showing a key feature" 
+    alt="Hero section showing a key feature" 
     className="w-4/5 h-full object-cover rounded-lg transform lg:scale-100 hover:scale-105 transition-transform duration-300 ease-in-out" 
 />
 </div>

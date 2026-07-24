@@ -36,6 +36,7 @@ const Navbar = () => {
                         onMouseEnter={() => setIsDropdownOpen(true)}
                         onMouseLeave={() => setIsDropdownOpen(false)}
                     >
+                        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a href="#" className="text-textcolor hover:text-yellow">
                             PRODUCTS
                         </a>
@@ -88,7 +89,8 @@ const Navbar = () => {
                     <a href="/" className="block px-4 py-2 text-textcolor hover:text-yellow" onClick={toggleMenu}>HOME</a>
                     <a href="/about" className="block px-4 py-2 text-textcolor hover:text-yellow" onClick={toggleMenu}>ABOUT</a>
                     <div className="relative">
-                        <a
+                            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                            <a
                             href="#"
                             className="block px-4 py-2 text-textcolor hover:text-yellow"
                             onClick={openDropdown} // Toggle dropdown instead of closing the menu

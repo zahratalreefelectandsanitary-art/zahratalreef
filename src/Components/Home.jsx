@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Footer from './Footer'
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import HeroSection from './Herocomponent'
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
 import 'swiper/css';
@@ -45,7 +45,9 @@ function Home() {
 
     ];
 
+    // eslint-disable-next-line no-unused-vars
     const [loading, setLoading] = useState(false);
+    // eslint-disable-next-line no-unused-vars
     const [formSubmitted, setFormSubmitted] = useState(false);
 
     const sendingmessage = async (event) => {
