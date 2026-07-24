@@ -17,8 +17,7 @@ const Footer = () => {
                 <br />
 
               </p>
-              <p className=''>©2026 all rights reserved. Designed by <a href="https://www.instagram.com/tri._design?igsh=MXMyNHVvb2Q5Z3U2eA==" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">WaveX.web</a></p>
-            </div>
+              <p className=''>©2026 all rights reserved. Designed by <a href="https://www.instagram.com/tri._design?igsh=MXMyNHVvb2Q5Z3U2eA==" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">WaveX</a></p>          </div>
 
             <div className="flex flex-row space-x-4">
               <a
